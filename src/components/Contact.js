@@ -2,36 +2,110 @@ import React from 'react';
 
 
 
-function Contact() {
+function Gizmo(props) {
 
-  return ( 
-    <div className = "Contact" >
-    < img src= "https://miro.medium.com/max/700/1*qyAOepULOa_kVehhEIySKA.jpeg" className= "avatar"></img>
-   <div>
-    < div className = "name"> The Cat </div>
-    
-    <Status />
+  return (
+    <div className="Contact" >
+      < img src={props.img} className="avatar"></img>
+      <div>
+        < div className="name"> {props.name} </div>
+
+        <StatusGizmo status="online" />
+      </div>
+
     </div>
 
-    </div>
-  
-  
+
 
   )
 
 };
 
-function Status(){
+function StatusGizmo(props) {
 
-  return(
+  return (
 
-    < div className = "status"> 
-    < div className = "status-text"> online </div>
-    < div className = "status-online"></div>
+    < div className="status">
+      < div className="status-text"> {props.status} </div>
+      < div className="status-online"></div>
     </div>
   )
 
 
 }
 
-export default Contact
+
+
+function BabyYoda(props) {
+
+
+  return (
+    <div className="Contact" >
+      < img src={props.img} className="avatar"></img>
+      <div>
+        < div className="name"> {props.name} </div>
+
+        <StatusBabyYoda status="online" />
+      </div>
+
+    </div>
+
+
+
+  )
+  }
+
+  function StatusBabyYoda(props) {
+
+    return (
+
+      < div className="status">
+        < div className="status-text"> {props.status} </div>
+        < div className="status-online"></div>
+      </div>
+    )
+  }
+
+
+
+
+  function Chewie(props) {
+
+
+    return (
+      <div className="Contact" >
+        < img src={props.img} className="avatar"></img>
+        <div>
+          < div className="name"> {props.name} </div>
+
+          <StatusChewie status="offline" />
+        </div>
+
+      </div>
+
+
+
+    )
+  }
+
+  function StatusChewie(props) {
+
+    return (
+
+      < div className="status">
+        < div className="status-text"> {props.status} </div>
+        < div className="status-online"></div>
+      </div>
+    )
+  }
+
+
+
+
+
+
+
+
+
+
+  export { Gizmo, BabyYoda, Chewie } 
